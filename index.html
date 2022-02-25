@@ -25,7 +25,8 @@
   <main class="container-fluid">
     <section class="row my-3">
       <div class="col-lg-6 m-auto">
-        <form onsubmit="app.songsController.search(event)" class="d-flex align-items-center bg-dark elevation-2 rounded p-1 shadow">
+        <form onsubmit="app.songsController.search(event)"
+          class="d-flex align-items-center bg-dark elevation-2 rounded p-1 shadow">
           <input type="text" class="form-control" name="query" placeholder="Search For Music" />
           <button class="btn btn-dark" type="submit">
             Search
@@ -35,13 +36,25 @@
     </section>
 
     <section class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-4">
         <h3 class="text-center">Search Results</h3>
-        <div id="songs" class="col-12 m-0">
+        <div id="results" class="col-12 m-0">
           <!-- api songs -->
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-4">
+        <h3 class="text-center">Play Now</h3>
+        <div class="col-12 m-0" id="active">
+          <!-- template for playlist -->
+          <!-- <div class="bg-dark text-center text-light rounded shadow">
+            <h3>`${s.artist}</h3>
+            <img src="${s.albumArt}" alt="" />
+            <h6>`${s.title}`</h6>
+          </div> -->
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-4">
         <h3 class="text-center">Playlist</h3>
         <div class="col-12 m-0" id="playlist">
           <!-- template for playlist -->

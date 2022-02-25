@@ -12,13 +12,17 @@ export default class Song {
 
   get Template() {
     return `
-
+    <div onclick="app.songsController.addSong()" class="bg-dark text-center text-light rounded shadow">
+    <h3>${this.artist}</h3>
+    <img src=${this.albumArt} alt="" />
+    <h6>${this.title}</h6>
+  </div>
         `;
   }
 
   get playlistTemplate() {
     return `
-
+<h4> ${this.title} ${this.artist} </h4>
         `;
   }
 }
